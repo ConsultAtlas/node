@@ -1,14 +1,15 @@
 {
-  "name": "express_starter",
+  "name": "express-lite",
   "version": "1.0.0",
-  "description": "starter api",
+  "description": "my cool thing",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Z",
+  "author": "jduv",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.2"
   }
 }
