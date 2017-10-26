@@ -39,7 +39,7 @@ app.post('/products', (request, response) => {
     id++;
 
     // Send back the new product
-    response.json(newProduct); 
+    response.json(newProduct);
 })
 
 // Updates a target product
@@ -49,11 +49,11 @@ app.put('/products/:id', (request, response) => {
     // We need to convert the parameter to a number.
     // URL params are always and forever strings.
     let id = Number(request.params.id)
-    
-    // Check to see if the product exists. If it doesn't, 
+
+    // Check to see if the product exists. If it doesn't,
     // we want to return a 404 Not Found.
     if (productsDict[id]) {
-        updatedProduct.id = id 
+        updatedProduct.id = id
         productsDict[id] = updatedProduct
         response.json(updatedProduct)
     } else {
@@ -63,6 +63,8 @@ app.put('/products/:id', (request, response) => {
 
 // Deletes a target product
 app.delete('/products/:id', (request, response) => {
+    let id = Number(request.params.id)
+
     if (productsDict[id]) {
         delete productsDict[id]
         response.status(204).send()
