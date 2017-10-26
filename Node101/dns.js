@@ -1,3 +1,5 @@
+// Simple DNS lookup
+
 var dns = require('dns');
 var host = 'grassrootslabs.io'; // any host
 
