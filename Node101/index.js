@@ -2,7 +2,7 @@
 
 var fs = require('fs');
 
-var dirpath = './'; // any directory
+var dirpath = '../'; // any directory
 fs.readdir(dirpath, function(err, entries){
   if (err) {
     console.log(err.message);
