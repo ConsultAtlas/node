@@ -1,0 +1,14 @@
+{
+  "name": "wiring",
+  "version": "1.0.0",
+  "description": "wiring exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Z",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

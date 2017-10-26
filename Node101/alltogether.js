@@ -8,6 +8,29 @@ var rl = readline.createInterface({
   output: process.stout
 });
 
-rl.question('Enter a domain name: ', function(name){
-  ;
-  rl.close();
+rl.question('Enter a domain name: ', function(domain){
+  dns.lookup(domain, function(err, ipAddress){
+    if (err) {
+      console.log(err.message);
+      return;
+    }
+    console.log(domain + 's IP address is: ', ipAddress);
+    rl.question('Enter a file name: ', function(filename){
+      var url = 'http://' + domain;
+      request.get(url, function(err, response, html) {
+        if (err) {
+          console.log(err.message);
+          return;
+        }
+        fs.writeFile(filename, html, function(err){
+          if (err) {
+            console.log(err.message);
+            return;
+          }
+          console.log('Wrote file '+ filename + '.');
+          rl.close();
+        });
+      });
+    });
+  });
+});

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App" ng-strict-di>  <!-- ng-strict-di -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Grassroots Labs - Blood Tests are Expensive. We fix that.</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <base href="/">
+
+    <link rel="stylesheet" href="/css/all.css">
+
+</head>
+
+<body>
+
+<!-- Header Part -->
+<div class="container" ng-controller="HeaderController" ng-include="'/partials/MainPage/header.html'"></div>
+<!-- Header Part -->
+
+<!-- Menu bar -->
+<div class="container" ng-controller="NavigationController" ng-include="'/partials/MainPage/navigation.html'"></div>
+<!-- Menu bar -->
+
+<ui-view></ui-view>
+
+<!-- Footer -->
+<div ng-include="'/partials/MainPage/footer.html'"></div>
+<!-- Footer Ends -->
+
+<notifications-bar class="notifications" closeIcon="fa fa-times-circle"></notifications-bar>
+
+<script src="/js/all.js"></script>
+
+
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyBQXddZ6e3vFwNZxbmTVXhu-ZV_kPYHuO0"></script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-56795790-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="https://js.hs-scripts.com/2802791.js"></script>
+<!-- End of HubSpot Embed Code -->
+
+<!-- Start of grassrootslabs Zendesk Widget script -->
+<script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var e=this.createElement("script");n&&(this.domain=n),e.id="js-iframe-async",e.src="https://assets.zendesk.com/embeddable_framework/main.js",this.t=+new Date,this.zendeskHost="grassrootslabs.zendesk.com",this.zEQueue=a,this.body.appendChild(e)},o.write('<body onload="document._l();">'),o.close()}();/*]]>*/</script>
+<!-- End of grassrootslabs Zendesk Widget script -->
+
+
+<!-- MedChat -->
+<!--<script type="text/javascript">-->
+    <!--(function(i, s, o, g, r, z, a, m) { i[r]={ ACCOUNT_TOKEN: z };a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m); }(window, document, 'script', "https://s3.getmedchat.com/embed/bundle.min.js", "MedChat", "TJQGXEniuoHgcvzK2plLAw"));-->
+<!--</script>-->
+<!-- end of MedChat -->
+
+</body>
+</html>
+
+
